@@ -37,7 +37,7 @@ mutation SaveBook($book: BookInput) {
 export const REMEOVE_BOOK = gql`
 
 mutation deleteBook($bookId: ID!) {
-  deleteBook(bookID: $bookId) {
+  deleteBook(bookId: $bookId) {
     savedBooks {
       authors
       bookId

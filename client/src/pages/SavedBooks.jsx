@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import {
   Container,
   Card,
@@ -7,7 +7,6 @@ import {
   Col
 } from 'react-bootstrap';
 
-import { getMe, deleteBook } from '../utils/API';
 import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
 import { QUERY_GET_SINGLE_USER } from '../utils/queries';
@@ -17,7 +16,8 @@ import { REMEOVE_BOOK } from '../utils/mutations';
 
 const SavedBooks = () => {
   const {loading, data} = useQuery(QUERY_GET_SINGLE_USER);
-  const [deleteBook] = useMutation(REMEOVE_BOOK, {
+  const [deleteBook] = useMutation(REMEOVE_BOOK, 
+   {
     refetchQueries:[QUERY_GET_SINGLE_USER, 'me']
   })
   const userData = data?.me || {};
@@ -33,7 +33,7 @@ const SavedBooks = () => {
     try {
       const {data} = await deleteBook({variables:{bookId}});
       // upon success, remove book's id from localStorage
-      console.log(data)
+      console.log(data);
       removeBookId(bookId);
     } catch (err) {
       console.error(err);

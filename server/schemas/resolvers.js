@@ -57,7 +57,7 @@ const resolvers = {
           { _id: context.user._id },
           { $pull: { savedBooks:{bookId} } }
         );
-
+        console.log(bookId);
         return user;
       }
       throw AuthenticationError;
