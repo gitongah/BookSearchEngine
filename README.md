@@ -5,7 +5,12 @@
   ## Link to the live demo
   https://booksearchengine-jtwi.onrender.com
   ## Description 🔎
-  This is a fully functioning Google Books API search engine built with a GraphQL  API built with Apollo . Server. The application was built using MERN stack, with REACT front end, MongoDB database , andNode.js/Express.js server and API.
+  This project is a fully functional Google Books API search engine, designed to provide users with an efficient and user-friendly way to search for books. It is built using a GraphQL API with Apollo Server to ensure flexible and robust data fetching. The application is developed using the MERN stack, which includes:
+
+  - React for the front end, providing a dynamic and responsive user interface.
+  - MongoDB as the database, offering scalable and high-performance data storage.
+  - Node.js and Express.js for the server and API, ensuring efficient handling of server-side operations.
+Together, these technologies create a seamless experience for users to search, view, and interact with book information from the Google Books API.
   ### Table of Contents 📖
   - [Usage](#usage-🎮)
   ## Usage 🎮
